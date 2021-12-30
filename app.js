@@ -97,7 +97,7 @@ function handleUserInput(e) {
     newElement.classList.add("todo");
     newElement.setAttribute("draggable", true);
     newElement.innerHTML = `
-    <input type="checkbox" aria-labelledby="checkbox" class="todo-checkbox border"></input>
+    <input type="checkbox" class="todo-checkbox border"></input>
     <div></div>
     <p class="todo-text">${value}</p>
     <img class="remove" src="./images/icon-cross.svg" alt="remove">`;
