@@ -425,12 +425,9 @@ hoverElements.forEach((element) => {
 getItemsFromLocalStorage();
 // FILTER MY TODOS THAT NOT HAS CLASS OF DONE
 const allChildren = [...container.children];
-let myLastChildren = [];
-allChildren.forEach(child => {
-  if (child.children[2].className === "todo-text") {
-    myLastChildren.push(child);
-  } else {
-    return;
-  }
+
+let notDoneChildren = allChildren.filter(child => { 
+    return child.children[2].className === "todo-text" 
 })
-itemsLiftLength(myLastChildren.length);
+
+itemsLiftLength(notDoneChildren.length);
